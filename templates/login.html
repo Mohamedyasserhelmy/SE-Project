@@ -1,0 +1,39 @@
+
+<html>
+{% load static %}
+<head>
+    <title> User Login </title>
+    <link rel= "stylesheet" type = "text/css" href = '{% static 'loginStyle.css'%}'>
+</head>
+
+<body>
+    <div class="fieldWrapper">
+        {{ form.errors }}
+    </div>
+    <div class = "header">
+    <h2>Login</h2>
+    </div>
+    <form action="" method = "POST"> 
+        {% csrf_token %}
+            
+    <div class="input-group">
+        <label> UserName</label>
+        {{form.username}}
+    </div>
+    <div class="input-group">
+        <label> Password</label>
+        {{form.password}}
+    </div>
+
+    <div class="input-group">
+        <button type="submit" name="login" class= "btn"> Login </button>
+    </div>
+
+    <p>Not Signed Yet 
+        <a href="{% url "registeration" %}">Sign in</a>
+    </p>
+</form>
+</body>
+
+
+</html>
