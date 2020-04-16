@@ -2,6 +2,7 @@ from django.db import models
 
 class User(models.Model):
     #ID IS auto-generated
+    #models is tested
     customer = 'customer' 
     username = models.CharField(max_length=30, blank = False, null = False)
     email = models.EmailField(max_length=40, blank = False, null = False)
