@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title%} home page {% endblock %}
+{% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+{% endblock %}
+{% block link %}
+    {% load static %}
+    <link href="{% static 'HomePageStyle.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div class="main-w3layouts wrapper">
+		<h1>Home page</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+                <p><strong>Welcome: {{ request.session.name }}</strong></p>
+                <form action="{% url 'logout' %}" style="text-align: center;">
+                    <button type="submit">logout</button>
+                </form>
+				<div class="wthree-text">
+                    <div class="clear"> </div>
+                </div>
+			</div>
+		</div>
+    </div> 
+{% endblock %}
