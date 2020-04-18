@@ -17,7 +17,7 @@ class userViewSet(viewsets.ModelViewSet):
 
 
 class HomePageView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'loggedin.html'
 
 class LoginView(FormView):
     template_name = 'login.html'

@@ -23,7 +23,7 @@ router.register(r'users', userViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', HomePageView.as_view(), name = 'home'),
+    path('', HomePageView.as_view(), name = 'home'),
     path('login/', LoginView.as_view(), name = 'login'),
     path('registeration/', RegForm.as_view(), name = 'registeration'),
     path('logout/', LogoutView.as_view(), name = 'logout'),
